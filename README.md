@@ -119,7 +119,7 @@ npx --version
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/google-adk-agents-course.git
+git clone https://github.com/kamau-mbugua/kaggle-5-day-ai-agents.git
 cd google-adk-agents-course
 
 # 2. Choose a day to start with
