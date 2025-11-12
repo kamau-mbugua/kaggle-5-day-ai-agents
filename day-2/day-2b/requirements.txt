@@ -1,0 +1,14 @@
+# Google ADK - Agent Development Kit
+google-adk>=0.1.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# MCP (Model Context Protocol) support
+# Note: Some MCP servers require Node.js and npx to be installed
+
+# Optional: For working with images
+# Pillow>=10.0.0
+
+# Optional: For HTTP MCP servers
+# requests>=2.31.0

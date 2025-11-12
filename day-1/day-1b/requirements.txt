@@ -1,0 +1,9 @@
+# Google ADK - Agent Development Kit
+google-adk>=0.1.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Optional: Jupyter support for notebook environments
+# ipython>=8.0.0
+# jupyter>=1.0.0
