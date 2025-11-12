@@ -1,3 +1,7 @@
+<div align="center">
+
+<img src="assets/course-banner.jpeg" alt="Kaggle x Google: 5-Day AI Agents Intensive" width="400"/>
+
 # Google ADK Agents Course
 
 **Complete implementation of Kaggle's 5-Day AI Agents Intensive Course**
@@ -8,6 +12,8 @@ A comprehensive, hands-on journey through AI agent development using Google's Ag
 [![Google ADK](https://img.shields.io/badge/Google%20ADK-1.18.0-red)](https://ai.google.dev/adk)
 [![Gemini](https://img.shields.io/badge/Gemini-2.5%20Flash-purple)](https://ai.google.dev/gemini-api)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+</div>
 
 ---
 
