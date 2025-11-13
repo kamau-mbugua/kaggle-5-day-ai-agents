@@ -1,0 +1,5 @@
+# Google Agent Development Kit
+google-adk>=1.18.0
+
+# Environment management
+python-dotenv>=1.0.0
