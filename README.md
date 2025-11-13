@@ -108,6 +108,52 @@ Connect to external services via MCP (Model Context Protocol) and implement huma
 
 ---
 
+### **Day 3: Memory Management**
+
+#### [Day 3a: Agent Sessions](day-3/day-3a/)
+**Short-Term Memory & Context**
+
+Build stateful agents that remember conversations using sessions. Learn to manage conversation history, implement context compaction, and persist data across application restarts.
+
+**Key Concepts:**
+- InMemorySessionService (temporary storage)
+- DatabaseSessionService (persistent storage)
+- Context compaction with EventsCompactionConfig
+- Session state management with ToolContext
+- Session isolation and privacy
+
+**What You'll Build:**
+- Stateful chatbot with conversation memory
+- Persistent session storage with SQLite
+- Context compaction for token optimization
+- Session state management with custom tools
+
+📖 [Full Documentation →](day-3/day-3a/README.md)
+
+---
+
+#### [Day 3b: Agent Memory](day-3/day-3b/)
+**Long-Term Knowledge & Retrieval**
+
+Implement long-term memory for agents that persists across conversations. Master reactive and proactive retrieval patterns, automate memory management with callbacks, and understand memory consolidation.
+
+**Key Concepts:**
+- InMemoryMemoryService for development
+- Manual memory storage (add_session_to_memory)
+- Reactive retrieval with load_memory tool
+- Proactive retrieval with preload_memory tool
+- Automated memory with callbacks
+
+**What You'll Build:**
+- Manual memory storage workflow
+- Reactive memory agent (agent decides when to search)
+- Proactive memory agent (auto-loads every turn)
+- Fully automated memory with callbacks
+
+📖 [Full Documentation →](day-3/day-3b/README.md)
+
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -162,12 +208,16 @@ python simple_agent.py
 2. **Day 2a** - Create custom tools, learn function patterns
 3. **Day 1b** - Explore multi-agent coordination
 4. **Day 2b** - Add external integrations and approvals
+5. **Day 3a** - Add session memory to your agents
+6. **Day 3b** - Implement long-term knowledge storage
 
-**Time Required:** ~8-10 hours total
+**Time Required:** ~12-14 hours total
 - Day 1a: 1-2 hours
 - Day 1b: 2-3 hours
 - Day 2a: 2-3 hours
 - Day 2b: 2-3 hours
+- Day 3a: 1-2 hours
+- Day 3b: 1-2 hours
 
 ### For Experienced Developers
 
@@ -176,8 +226,10 @@ python simple_agent.py
 2. **Day 1b** - Focus on workflow patterns (1 hour)
 3. **Day 2a** - Agent composition patterns (1 hour)
 4. **Day 2b** - MCP integration and state management (1.5 hours)
+5. **Day 3a** - Sessions and context compaction (45 min)
+6. **Day 3b** - Memory retrieval patterns (45 min)
 
-**Time Required:** ~4-5 hours total
+**Time Required:** ~6-7 hours total
 
 ---
 
@@ -215,6 +267,13 @@ python simple_agent.py
 - Pause/resume with state preservation
 - Error handling and retry strategies
 
+**Memory Management**
+- Short-term session memory
+- Long-term knowledge storage
+- Context compaction for efficiency
+- Reactive vs proactive retrieval
+- Automated memory workflows
+
 ### Skills You'll Master
 
 ✅ Building interactive AI agents
@@ -222,7 +281,9 @@ python simple_agent.py
 ✅ Orchestrating multi-agent workflows
 ✅ Creating custom function tools
 ✅ Implementing approval workflows
-✅ Managing agent state and sessions
+✅ Managing short-term session memory
+✅ Building long-term knowledge bases
+✅ Optimizing token usage with compaction
 ✅ Handling errors and retries
 ✅ Production deployment patterns
 
@@ -278,6 +339,35 @@ google-adk-agents-course/
 │       ├── requirements.txt
 │       ├── .env.example
 │       ├── README.md               # 8000+ words
+│       └── QUICKSTART.md
+│
+├── day-3/
+│   ├── day-3a/                      # Agent Sessions
+│   │   ├── utils/
+│   │   │   └── session_helpers.py   # Session utilities
+│   │   ├── examples/
+│   │   │   ├── example_1_stateful_agent.py
+│   │   │   ├── example_2_persistent_sessions.py
+│   │   │   ├── example_3_context_compaction.py
+│   │   │   └── example_4_session_state.py
+│   │   ├── session_management_demo.py
+│   │   ├── requirements.txt
+│   │   ├── .env.example
+│   │   ├── README.md               # 7500+ words
+│   │   └── QUICKSTART.md
+│   │
+│   └── day-3b/                      # Agent Memory
+│       ├── utils/
+│       │   └── memory_helpers.py    # Memory utilities
+│       ├── examples/
+│       │   ├── example_1_manual_memory.py
+│       │   ├── example_2_reactive_memory.py
+│       │   ├── example_3_proactive_memory.py
+│       │   └── example_4_automated_memory.py
+│       ├── memory_management_demo.py
+│       ├── requirements.txt
+│       ├── .env.example
+│       ├── README.md               # 7000+ words
 │       └── QUICKSTART.md
 │
 ├── README.md                        # This file
@@ -339,13 +429,14 @@ google-adk-agents-course/
 
 | Metric | Count |
 |--------|-------|
-| **Total Days** | 4 (Days 1a, 1b, 2a, 2b) |
-| **Code Examples** | 30+ runnable scripts |
-| **Documentation** | 30,000+ words |
-| **Lines of Code** | 3,000+ lines |
+| **Total Days** | 6 (Days 1a, 1b, 2a, 2b, 3a, 3b) |
+| **Code Examples** | 40+ runnable scripts |
+| **Documentation** | 45,000+ words |
+| **Lines of Code** | 4,500+ lines |
 | **Workflow Patterns** | 4 patterns |
-| **Custom Tools** | 10+ examples |
-| **Interactive Demos** | 4 complete demos |
+| **Memory Patterns** | 4 patterns (manual, reactive, proactive, automated) |
+| **Custom Tools** | 15+ examples |
+| **Interactive Demos** | 6 complete demos |
 
 ---
 
@@ -377,6 +468,21 @@ google-adk-agents-course/
 - Data analysis agent with code execution
 - Integration agent connecting multiple services
 - Workflow automation with human oversight
+
+### After Day 3
+
+**You'll be able to:**
+- Build agents with short-term conversation memory
+- Implement persistent storage across restarts
+- Optimize token usage with context compaction
+- Create long-term knowledge bases across conversations
+- Automate memory management with callbacks
+
+**Example Projects:**
+- Personal assistant with persistent preferences
+- Customer support bot remembering user history
+- Research agent accumulating knowledge over time
+- Multi-user chatbot with isolated memories
 
 ---
 
@@ -596,11 +702,6 @@ This course implementation is based on:
 4. **GitHub Issues**: Open an issue for bugs or questions
 5. **Community**: Join Google ADK Discord for real-time help
 
-### Contact
-
-- **GitHub Issues**: [Report Issues](https://github.com/YOUR_USERNAME/google-adk-agents-course/issues)
-- **Discussions**: [Start a Discussion](https://github.com/YOUR_USERNAME/google-adk-agents-course/discussions)
-- **Email**: your.email@example.com (optional)
 
 ---
 
@@ -612,12 +713,13 @@ This course implementation is based on:
 - [x] Day 1b: Multi-Agent Systems
 - [x] Day 2a: Agent Tools
 - [x] Day 2b: Tool Patterns & MCP
+- [x] Day 3a: Agent Sessions (Short-term Memory)
+- [x] Day 3b: Agent Memory (Long-term Knowledge)
 
 ### Planned 🚧
 
-- [ ] Day 3: Advanced Agent Patterns
-- [ ] Day 4: Production Deployment
-- [ ] Day 5: Real-World Applications
+- [ ] Day 4: Observability & Evaluation
+- [ ] Day 5: Production & Real-World Applications
 - [ ] Additional MCP server examples
 - [ ] Testing frameworks and strategies
 - [ ] Monitoring and observability
@@ -628,10 +730,10 @@ This course implementation is based on:
 ## 📈 Project Stats
 
 ```
-Repository Size: ~3 MB (excluding venv)
-Code Files: 40+
-Documentation: 30,000+ words
-Examples: 30+ runnable scripts
+Repository Size: ~4 MB (excluding venv)
+Code Files: 50+
+Documentation: 45,000+ words
+Examples: 40+ runnable scripts
 Last Updated: January 2025
 Python Version: 3.10+
 Google ADK: 1.18.0
@@ -643,18 +745,25 @@ Google ADK: 1.18.0
 
 ### Continue Learning
 
-1. **Day 3** (Coming Soon): Advanced agent patterns and strategies
-2. **Day 4** (Coming Soon): Production deployment and monitoring
-3. **Day 5** (Coming Soon): Real-world applications and case studies
+1. **Day 4** (Coming Soon): Observability and Evaluation
+   - Monitor agent performance
+   - Implement logging and tracing
+   - Evaluate agent quality
+
+2. **Day 5** (Coming Soon): Production & Real-World Applications
+   - Vertex AI Memory Bank
+   - Production deployment patterns
+   - Scaling and optimization
 
 ### Build Your Own Projects
 
 Apply what you've learned:
-- Customer support automation
-- Content generation pipeline
-- Research and analysis agents
-- Workflow automation systems
-- Multi-agent collaboration tools
+- Customer support with memory and context
+- Personal assistant remembering preferences
+- Content generation with multi-agent workflows
+- Research agent accumulating knowledge
+- Financial assistant with approval workflows
+- Multi-user systems with isolated sessions
 
 ### Join the Community
 
