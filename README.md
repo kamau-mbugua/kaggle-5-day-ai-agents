@@ -154,6 +154,52 @@ Implement long-term memory for agents that persists across conversations. Master
 
 ---
 
+### **Day 4: Quality & Testing**
+
+#### [Day 4a: Agent Observability](day-4/day-4a/)
+**Logs, Traces, and Debugging**
+
+Master agent monitoring and debugging through comprehensive observability patterns. Learn to use logging levels, debug broken agents systematically, and implement custom monitoring plugins.
+
+**Key Concepts:**
+- Logging levels (DEBUG, INFO, WARNING, ERROR)
+- Three pillars of observability (Logs, Traces, Metrics)
+- Systematic debugging workflow
+- LoggingPlugin for production observability
+- Custom plugins with lifecycle callbacks
+
+**What You'll Build:**
+- Logging setup with different levels
+- Debugging workflow for broken agents
+- Production logging with LoggingPlugin
+- Custom plugins (InvocationCounter, PerformanceMonitor, ToolUsageTracker)
+
+📖 [Full Documentation →](day-4/day-4a/README.md)
+
+---
+
+#### [Day 4b: Agent Evaluation](day-4/day-4b/)
+**Testing, Metrics, and Quality Measurement**
+
+Implement systematic agent evaluation using Google ADK's evaluation framework. Learn to create test cases, run automated evaluations, interpret results, and iteratively improve agent quality.
+
+**Key Concepts:**
+- Evaluation metrics (response_match_score, tool_trajectory_avg_score)
+- Creating evalsets and test configurations
+- Running evaluations with adk eval CLI
+- Analyzing failures and debugging systematically
+- Iterative improvement to 100% pass rate
+
+**What You'll Build:**
+- Comprehensive test case design
+- Home automation agent with intentional flaws
+- Evaluation workflow (Create → Configure → Run → Analyze → Fix)
+- Regression prevention with automated testing
+
+📖 [Full Documentation →](day-4/day-4b/README.md)
+
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -210,14 +256,18 @@ python simple_agent.py
 4. **Day 2b** - Add external integrations and approvals
 5. **Day 3a** - Add session memory to your agents
 6. **Day 3b** - Implement long-term knowledge storage
+7. **Day 4a** - Monitor and debug agents with observability
+8. **Day 4b** - Test and evaluate agent quality systematically
 
-**Time Required:** ~12-14 hours total
+**Time Required:** ~16-18 hours total
 - Day 1a: 1-2 hours
 - Day 1b: 2-3 hours
 - Day 2a: 2-3 hours
 - Day 2b: 2-3 hours
 - Day 3a: 1-2 hours
 - Day 3b: 1-2 hours
+- Day 4a: 1-2 hours
+- Day 4b: 2-3 hours
 
 ### For Experienced Developers
 
@@ -228,8 +278,10 @@ python simple_agent.py
 4. **Day 2b** - MCP integration and state management (1.5 hours)
 5. **Day 3a** - Sessions and context compaction (45 min)
 6. **Day 3b** - Memory retrieval patterns (45 min)
+7. **Day 4a** - Observability and debugging patterns (45 min)
+8. **Day 4b** - Evaluation framework and testing (1.5 hours)
 
-**Time Required:** ~6-7 hours total
+**Time Required:** ~8-9 hours total
 
 ---
 
@@ -274,6 +326,14 @@ python simple_agent.py
 - Reactive vs proactive retrieval
 - Automated memory workflows
 
+**Quality & Testing**
+- Agent observability and monitoring
+- Logging levels and debugging workflows
+- Custom monitoring plugins
+- Evaluation metrics and test cases
+- Automated evaluation with adk eval CLI
+- Iterative quality improvement
+
 ### Skills You'll Master
 
 ✅ Building interactive AI agents
@@ -284,6 +344,9 @@ python simple_agent.py
 ✅ Managing short-term session memory
 ✅ Building long-term knowledge bases
 ✅ Optimizing token usage with compaction
+✅ Monitoring and debugging agents
+✅ Creating comprehensive test suites
+✅ Evaluating agent quality systematically
 ✅ Handling errors and retries
 ✅ Production deployment patterns
 
@@ -370,6 +433,36 @@ google-adk-agents-course/
 │       ├── README.md               # 7000+ words
 │       └── QUICKSTART.md
 │
+├── day-4/
+│   ├── day-4a/                      # Agent Observability
+│   │   ├── utils/
+│   │   │   └── observability_helpers.py  # Helper functions
+│   │   ├── examples/
+│   │   │   ├── example_1_basic_logging.py
+│   │   │   ├── example_2_debugging_broken_agent.py
+│   │   │   ├── example_3_production_logging.py
+│   │   │   └── example_4_custom_plugins.py
+│   │   ├── observability_demo.py
+│   │   ├── requirements.txt
+│   │   ├── .env.example
+│   │   ├── README.md               # 8000+ words
+│   │   └── QUICKSTART.md
+│   │
+│   └── day-4b/                      # Agent Evaluation
+│       ├── utils/
+│       │   └── evaluation_helpers.py  # Helper functions
+│       ├── examples/
+│       │   ├── example_1_basic_evaluation.py
+│       │   ├── example_2_test_cases.py
+│       │   ├── example_3_running_evaluations.py
+│       │   └── example_4_analysis_and_fixes.py
+│       ├── create_home_agent.py     # Agent generator
+│       ├── evaluation_demo.py
+│       ├── requirements.txt
+│       ├── .env.example
+│       ├── README.md               # 9000+ words
+│       └── QUICKSTART.md
+│
 ├── README.md                        # This file
 └── .gitignore
 ```
@@ -388,14 +481,14 @@ google-adk-agents-course/
 
 ### Comprehensive Examples
 
-- **30+ Working Examples**: Every concept has runnable code
+- **50+ Working Examples**: Every concept has runnable code
 - **Interactive Demos**: Menu-driven interfaces for easy exploration
 - **Progressive Complexity**: From simple to advanced patterns
 - **Real-World Scenarios**: Practical use cases and applications
 
 ### Thorough Documentation
 
-- **30,000+ Words**: Four comprehensive guides
+- **62,000+ Words**: Comprehensive guides for all 8 modules
 - **Quick Start Guides**: Get running in 5 minutes
 - **Architecture Diagrams**: Visual explanations of concepts
 - **Troubleshooting**: Common issues and solutions
@@ -429,14 +522,16 @@ google-adk-agents-course/
 
 | Metric | Count |
 |--------|-------|
-| **Total Days** | 6 (Days 1a, 1b, 2a, 2b, 3a, 3b) |
-| **Code Examples** | 40+ runnable scripts |
-| **Documentation** | 45,000+ words |
-| **Lines of Code** | 4,500+ lines |
+| **Total Days** | 8 (Days 1a, 1b, 2a, 2b, 3a, 3b, 4a, 4b) |
+| **Code Examples** | 50+ runnable scripts |
+| **Documentation** | 62,000+ words |
+| **Lines of Code** | 6,000+ lines |
 | **Workflow Patterns** | 4 patterns |
 | **Memory Patterns** | 4 patterns (manual, reactive, proactive, automated) |
-| **Custom Tools** | 15+ examples |
-| **Interactive Demos** | 6 complete demos |
+| **Observability Patterns** | 4 patterns (basic logging, debugging, production, custom plugins) |
+| **Evaluation Patterns** | 5 patterns (create, configure, run, analyze, fix) |
+| **Custom Tools** | 20+ examples |
+| **Interactive Demos** | 8 complete demos |
 
 ---
 
@@ -483,6 +578,22 @@ google-adk-agents-course/
 - Customer support bot remembering user history
 - Research agent accumulating knowledge over time
 - Multi-user chatbot with isolated memories
+
+### After Day 4
+
+**You'll be able to:**
+- Monitor and debug agents with comprehensive logging
+- Implement custom observability plugins
+- Create systematic test cases for agents
+- Run automated evaluations with metrics
+- Debug failures and improve agent quality iteratively
+
+**Example Projects:**
+- Production agents with full observability
+- Quality-assured agents with automated testing
+- CI/CD pipelines with evaluation gates
+- Monitored agents with performance tracking
+- Systematically tested multi-agent systems
 
 ---
 
@@ -715,28 +826,29 @@ This course implementation is based on:
 - [x] Day 2b: Tool Patterns & MCP
 - [x] Day 3a: Agent Sessions (Short-term Memory)
 - [x] Day 3b: Agent Memory (Long-term Knowledge)
+- [x] Day 4a: Agent Observability (Logging & Debugging)
+- [x] Day 4b: Agent Evaluation (Testing & Metrics)
 
 ### Planned 🚧
 
-- [ ] Day 4: Observability & Evaluation
 - [ ] Day 5: Production & Real-World Applications
 - [ ] Additional MCP server examples
-- [ ] Testing frameworks and strategies
-- [ ] Monitoring and observability
+- [ ] Advanced testing strategies
 - [ ] Performance optimization guides
+- [ ] Deployment patterns and best practices
 
 ---
 
 ## 📈 Project Stats
 
 ```
-Repository Size: ~4 MB (excluding venv)
-Code Files: 50+
-Documentation: 45,000+ words
-Examples: 40+ runnable scripts
+Repository Size: ~5 MB (excluding venv)
+Code Files: 65+
+Documentation: 62,000+ words
+Examples: 50+ runnable scripts
 Last Updated: January 2025
 Python Version: 3.10+
-Google ADK: 1.18.0
+Google ADK: 1.18.0+
 ```
 
 ---
@@ -745,25 +857,22 @@ Google ADK: 1.18.0
 
 ### Continue Learning
 
-1. **Day 4** (Coming Soon): Observability and Evaluation
-   - Monitor agent performance
-   - Implement logging and tracing
-   - Evaluate agent quality
-
-2. **Day 5** (Coming Soon): Production & Real-World Applications
+1. **Day 5** (Coming Soon): Production & Real-World Applications
    - Vertex AI Memory Bank
    - Production deployment patterns
    - Scaling and optimization
+   - Real-world case studies
 
 ### Build Your Own Projects
 
 Apply what you've learned:
-- Customer support with memory and context
-- Personal assistant remembering preferences
-- Content generation with multi-agent workflows
-- Research agent accumulating knowledge
-- Financial assistant with approval workflows
-- Multi-user systems with isolated sessions
+- Customer support with memory, monitoring, and quality assurance
+- Personal assistant with persistent preferences and evaluation
+- Content generation with multi-agent workflows and testing
+- Research agent with knowledge accumulation and observability
+- Financial assistant with approval workflows and comprehensive logging
+- Multi-user systems with isolated sessions and automated testing
+- Production-ready agents with full observability and evaluation pipelines
 
 ### Join the Community
 
